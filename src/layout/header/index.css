@@ -1,0 +1,89 @@
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.hamburger {
+  display: none;
+}
+.headerContainer a {
+  color: black;
+  text-decoration: none;
+}
+
+.headerContainer a.active {
+  transform: scale(1.4);
+  transition: 640ms;
+  border-bottom: 1px solid var(--blue);
+  padding: 0px;
+}
+
+.headerContainer .left h1 {
+  color: var(--blue);
+  font-size: 29px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+/* Right */
+.headerContainer .right {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  gap: 65px;
+}
+
+.headerContainer .right nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.headerContainer .right nav ul .contactBtn {
+  background-color: var(--blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 13px;
+  border-color: transparent;
+}
+/* Mobil üçün uyğunlaşdırma */
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* Default olaraq gizlidir */
+    flex-direction: column;
+    position: absolute;
+    top: 110px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .headerContainer a.active {
+    transform: scale(1.2);
+  }
+  .navbar.open {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar.open .navlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .navbar.open .navlist a.active {
+    font-size: 1.5rem;
+    color: var(--blue);
+  }
+  .hamburger {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
