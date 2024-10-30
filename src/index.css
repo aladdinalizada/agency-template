@@ -1,0 +1,12 @@
+:root {
+  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
+  --blue: #1090cb;
+  --purple: #4628a4;
+  --darkblue: #00329b;
+  --brown: #252525;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
